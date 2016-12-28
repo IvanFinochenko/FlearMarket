@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>Предложения на обмен</h1>
+    <div class="large-11 columns">
+
+            {% for offer in offers %}
+                <p>{{ offer.userSecond.username }} предлагает вам поменять ваш {{ offer.itemFirst.name }} на {{ offer.itemSecond.name }}
+                <a href="/market/offerAccept/{{ offer.id }}">Принять</a>/<a href="/market/offerDeny/{{ offer.id }}">Отклонить</a>
+                </p>
+            {% endfor %}
+
+    </div>
+{% endblock %}

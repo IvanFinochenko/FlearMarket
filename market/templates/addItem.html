@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block content %}
+    <form action="market/addItem/" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" class="button" value="Добавить">
+    </form>
+{% endblock %}

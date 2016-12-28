@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>{{ itemnum }}</h1>
+    <h1>Выберите свою вещь, которую вы хотите поменять</h1>
+    <div class="large-11 columns">
+        {% for item in items %}
+            <h4>{{ item.name }} <a href="/market/trade/{{ item.id }}">Выбрать</a></h4>
+            <p>{{ item.category }}</p>
+        {% endfor %}
+    </div>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>Все вещи</h1>
+    <div class="large-11 columns">
+        {% for item in items %}
+            <h4>{{ item.name }} <a href="/market/choice/{{ item.id }}">Предложить обмен</a></h4>
+            <p>{{ item.category }}</p>
+        {% endfor %}
+        {% for b in bb %}
+            <p>{{ b }}</p>
+        {% endfor %}
+    </div>
+{% endblock %}
